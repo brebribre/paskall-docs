@@ -1,108 +1,154 @@
 # Connecting a Screen
 
-This guide covers two separate tasks: pairing a screen that is already running Fortu Player, and installing Fortu Player on a device for the first time. Most of the time you only need the pairing steps.
+Connecting a screen takes about a minute: the screen shows a code, you type that code into Paskall, and the screen starts playing. This page walks through it with pictures.
 
-| | |
+## Before you start
+
+You need two things ready. Do each once.
+
+### 1. Setting up the device
+
+The screen (an Android TV, stick, or tablet) must have **Paskall Player** installed and be showing a pairing code like this:
+
+![The player's pairing screen: a six-letter code on a blue background](images/pairing/player-pairing-code.png)
+
+If your screen already shows a code like this, you're ready. Skip to [Pairing a screen](#pairing-a-screen).
+
+If the screen is new and has nothing installed yet, follow [Installing the player on a new device](#installing-the-player-on-a-new-device) at the bottom of this page first. That takes about 10 minutes and is done once per screen.
+
+### 2. Setting up your account
+
+*Coming soon.*
+
+## Pairing a screen
+
+**Step 1.** Open Paskall and go to **Screens** in the left menu. Click **Connect a screen**.
+
+![The Screens page with the Connect a screen button at the top right](images/pairing/01-screens-page.png)
+
+**Step 2.** A small window opens asking for the code.
+
+![The Connect a screen window with fields for the code, a name and a location](images/pairing/02-connect-dialog.png)
+
+**Step 3.** Type the code exactly as the screen shows it. Give the screen a name you'll recognise later (for example "Lobby screen") and, if you like, where it is.
+
+![The window with the code, name and location filled in](images/pairing/03-code-typed.png)
+
+!!! tip
+    The code never contains the letters O, I or L, or the digits 0 and 1, so there is nothing to mix up. Codes stop working after 15 minutes; if yours has expired, the screen shows a new one by itself.
+
+**Step 4.** Click **Connect**. Paskall waits for the screen to answer. This usually takes a few seconds.
+
+![Waiting for the screen to connect](images/pairing/04-connecting.png)
+
+**Step 5.** Once the screen has connected, Paskall asks how it is mounted. Pick the option where the top of the picture would be at the top of the panel, then click **Done**. You can change this later on the screen's page.
+
+![The screen is connected; four buttons ask which way the panel is mounted](images/pairing/05-connected-orientation.png)
+
+**Step 6.** You land on the screen's own page. The screen itself now shows a "waiting for content" card with its name.
+
+![The new screen's page in Paskall](images/pairing/06-screen-page.png)
+
+That's it. To make it play something, put a playlist on it from **Campaigns**. The screen starts playing within a few seconds.
+
+!!! note "If a screen is removed from Paskall"
+    It notices by itself and shows a new pairing code. Nothing needs doing on the hardware. Just connect it again with the new code.
+
+## Orientation
+
+Orientation is chosen when the screen connects, and can be changed any time on the screen's page under **Settings**. It is the rotation in degrees, clockwise from the panel's own landscape:
+
+| Option | Meaning |
 |---|---|
-| **[Pair a screen](#pair-a-screen)** — most common | The device is already running Fortu Player and is showing a pairing code. Takes under a minute. |
-| **[Set up new hardware](#set-up-new-hardware)** — first time only | A fresh Android device with nothing installed. About 10 minutes. Done once per screen. |
+| 0° | Landscape |
+| 90° | Portrait, top of the picture on the right |
+| 180° | Landscape, upside down |
+| 270° | Portrait, top of the picture on the left |
 
-## Pair a screen
+The two portrait options matter: a tall screen stood on the other side needs the other one, or everything shows upside down. A change takes effect within a few seconds. No reinstall is needed.
 
-Use this procedure when the screen is already running Fortu Player and is showing a pairing code.
+## Screen status
 
-1. Power on the screen. It displays a 6 character pairing code.
+Paskall shows whether a screen is reachable from how long ago it last checked in.
 
-    *The code uses only unambiguous characters. It never contains O, 0, I, 1, or L, because it is read from across a room.*
+| Status | Last checked in |
+|---|---|
+| Online | Under 2 minutes ago |
+| Slow to respond | 2 to 15 minutes ago |
+| Offline | Over 15 minutes ago, or never |
 
-2. Note the server address printed below the code.
+To check right now, open the screen's page and click **Probe** next to its status. It asks the screen to check in immediately and waits up to 40 seconds.
 
-    *If pairing does not work, check this address first. It must match the CMS you are pairing from. This is the most common cause of a pairing code that will not work.*
+## Troubleshooting
 
-3. In the CMS, go to **Screens → Connect a screen**.
-4. Enter the pairing code.
-5. Enter a name and location for the screen, then submit the form.
-6. The screen receives its credentials within about 5 seconds and shows an idle card.
+**The screen is black, with no code and no content.**
+This is almost always power or hardware, not pairing. A screen that has been removed or disconnected always shows a code. Check the power connection first.
 
-    *Assign a playlist to start playback. Playback starts within 30 seconds, usually sooner.*
+**The code doesn't work.**
+Long press anywhere on the screen to open its diagnostics view. Compare the server address shown there with the Paskall you are using. If they don't match, the screen was set up for a different server.
 
-!!! note
-    If a screen is deleted from the CMS, it detects this automatically and shows a new pairing code on its own. No action is required on the hardware. Repeat the steps above using the new code.
+**How do I see what a screen is doing?**
+Long press anywhere on the screen. The diagnostics view shows its name, the server it talks to, the content version, cached data, and the most recent error if there is one.
 
-## Set up new hardware
+## Installing the player on a new device
 
-*About 10 minutes.* Use this procedure the first time Fortu Player is installed on a device. Once complete, the screen behaves exactly like the pairing flow above. This is done once per screen.
+*About 10 minutes, once per screen.* After this, the screen shows a pairing code and you continue with [Pairing a screen](#pairing-a-screen) above.
 
-### Step 1: Allow the APK to install
+### Step 1: Allow the app to install
 
-Google Play Protect blocks installing an APK that did not come from the Play Store by default. Turn this off once per device before attempting either install method below — otherwise the install is silently blocked or flagged as harmful.
+Google Play Protect blocks apps that don't come from the Play Store. Turn that off once on the device.
 
-!!! info "Skip if"
-    You're going straight to Device Owner setup (Step 4). That flow factory resets the device and installs over `adb install`, which isn't gated by Play Protect's unknown-sources restriction the way a browser or file-manager install is — and a freshly reset device has no signed-in Google account to reach this setting with anyway.
+!!! info "Skip this if"
+    You are going straight to Device Owner setup (Step 4). That path installs over a cable and isn't blocked by Play Protect.
 
 1. Open the **Google Play Store** app on the device.
-2. Tap the profile icon, top right.
-3. Tap **Play Protect**.
-4. Tap the gear/settings icon, top right of the Play Protect screen.
-5. Turn off **Scan apps with Play Protect**.
-
-    *Wording and navigation vary slightly by Play Store version — look for anything mentioning scanning or blocking apps installed from outside the Play Store.*
+2. Tap the profile icon, top right, then **Play Protect**.
+3. Tap the gear icon, top right.
+4. Turn off **Scan apps with Play Protect**.
 
 ### Step 2: Install the app
 
 [Download latest APK](https://signage-cms-production.up.railway.app/player/download){ .md-button .md-button--primary }
 
-Always the current build. Open this link on the device's own browser for Method B below, or on your computer for Method A. [Looking for an older build?](https://signage-cms-production.up.railway.app/player/versions)
-
-Choose one of the following two methods.
+Always the current build. Open this link on the device's own browser for Method B, or on your computer for Method A. [Looking for an older build?](https://signage-cms-production.up.railway.app/player/versions)
 
 #### Method A: USB, from a computer
 
-1. On the device, go to Settings → About phone.
-2. Tap Build number 7 times to enable Developer options.
-3. Go to Settings → Developer options and enable **USB debugging**.
-4. Connect the device to your computer with a USB cable.
-5. Accept the "Allow USB debugging?" prompt on the device.
-6. Run:
+1. On the device, go to Settings → About phone and tap **Build number** 7 times.
+2. Go to Settings → Developer options and turn on **USB debugging**.
+3. Connect the device to your computer with a USB cable and accept the "Allow USB debugging?" prompt on the device.
+4. Run:
 
     ```bash
     adb install -r fortu-player.apk
     ```
 
-    *The file downloaded above, wherever you saved it.*
-
 #### Method B: No cable
 
-1. On the device itself, open this page in its browser and tap **Download latest APK** above.
+1. On the device, open this page in its browser and tap **Download latest APK** above.
+2. Open the downloaded file from the notification shade or file manager.
+3. Allow "Install from unknown sources" when asked.
 
-    *No browser, or already locked into another app? Copy the APK to a USB drive or cloud storage from another computer instead, then open it from this device's file manager.*
+### Step 3: Choose how locked down the screen should be
 
-2. Open the downloaded file from the device's notification shade or file manager.
-3. Allow "Install from unknown sources" when prompted.
+A plain install keeps the screen awake and hides the system bars, but the Home button still exits the app. Three levels, weakest first:
 
-### Step 3: Choose a kiosk level
-
-A plain install keeps the screen awake and hides the system bars, but the Home button still exits the app. Three levels are available, in order of strength.
-
-| Level | Setup required | Behavior |
+| Level | Setup | What it does |
 |---|---|---|
-| Screen pinning | None | Settings → Security → App pinning. Prevents accidental exits only. Any user can unpin the app. |
-| Launcher mode | Edit AndroidManifest.xml, rebuild | The screen boots directly into Fortu Player. Not recommended on a personal device, since it will also request to become that device's launcher. |
-| Device Owner mode | See Step 4 below | **Recommended.** Cannot be exited. Required for silent updates and for switching the display fully off on a power schedule (other installs show a black screen and let the panel sleep). After a reboot the device shows its home screen; open Fortu Player from there. |
+| Screen pinning | None. Settings → Security → App pinning. | Stops accidental exits only. Anyone can unpin. |
+| Launcher mode | Edit AndroidManifest.xml and rebuild. | The device boots straight into the player. Not for a personal device. |
+| Device Owner | Step 4 below. | **Recommended.** Can't be exited. Needed for silent updates and for switching the display fully off on a schedule. |
 
-### Step 4: Set up Device Owner mode (recommended)
+### Step 4: Device Owner mode (recommended)
 
-!!! warning "Prerequisite"
-    The device must be factory reset, and no Google account can be signed in during setup. Android will not grant Device Owner status otherwise, and there is no workaround. This step must happen before anything else in this section.
+!!! warning "Before you begin"
+    The device must be factory reset, with no Google account signed in. Android won't grant Device Owner otherwise, and there is no way around it.
 
 1. Factory reset the device: Settings → System → Reset → Erase all data.
-2. During setup, skip the Google account step.
-
-    *Skip Wi-Fi during setup too, if the option is offered. Add Wi-Fi afterward from Settings. Some setup wizards add a Google account automatically as soon as the device is online.*
-
-3. Enable Developer options: Settings → About → tap Build number 7 times.
-4. Enable USB debugging: Settings → Developer options → USB debugging.
-5. Install the app and grant Device Owner status:
+2. During setup, skip the Google account step. Skip Wi-Fi too if offered, and add it afterwards from Settings.
+3. Turn on Developer options: Settings → About → tap Build number 7 times.
+4. Turn on USB debugging: Settings → Developer options → USB debugging.
+5. Install the app and make it Device Owner:
 
     ```bash
     adb install -r fortu-player.apk
@@ -110,46 +156,12 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
       com.fortu.player/com.fortu.player.kiosk.DeviceAdminReceiver
     ```
 
-    *Expect the output `Success: Device owner set to package com.fortu.player`. If the output instead says "there are already some accounts on the device," an account was added during setup. Factory reset the device and repeat from step 2.*
+    You should see `Success: Device owner set to package com.fortu.player`. If it says there are already accounts on the device, an account was added during setup. Factory reset and start again from step 2.
 
-6. Launch the app. On first launch it automatically locks itself to the foreground, disables the lock screen, and keeps the screen on. No further configuration is needed.
-7. Pair the screen using the code it displays. See [Pair a screen](#pair-a-screen) above.
-8. Verify the setup. Long press anywhere on the screen to open the diagnostics overlay. Confirm it reads `device owner (full kiosk)`. In the CMS, the screen's page shows **Setup: Managed** once it has checked in.
-
-    *If it reads `not owner (screen pinning only)`, or the CMS shows **Setup: Basic**, step 5 did not complete successfully. Repeat step 5.*
-
-9. Reboot the device once. It returns to the Android home screen. Open Fortu Player from there and confirm the content loop resumes.
+6. Open the app. It locks itself to the foreground, disables the lock screen and keeps the screen on. Nothing else to configure.
+7. Pair the screen with the code it shows. See [Pairing a screen](#pairing-a-screen).
+8. Check it worked: long press the screen to open diagnostics and confirm it says `device owner (full kiosk)`. In Paskall, the screen's page shows **Setup: Managed** once it has checked in. If it says **Basic**, repeat step 5.
+9. Reboot once. The device comes back to the Android home screen; open Paskall Player from there and confirm it resumes.
 
 !!! note
-    Device Owner mode cannot be removed with an adb command. To reuse a device for another purpose later, factory reset it. Confirm you will not need the device back before completing this setup.
-
-## Orientation
-
-Orientation is set per screen in the CMS, not during installation. The same installed app supports every way a panel can be mounted.
-
-It is a rotation in degrees, clockwise from the panel's own landscape: 0° is landscape, 90° portrait with the top on the right, 180° landscape upside down, 270° portrait with the top on the left. The two portrait values matter: a totem stood on the other side needs the other one, or everything shows upside down.
-
-The CMS asks for it the moment a screen connects. To change it later, use the screen's Settings tab. The change takes effect on the screen's next check-in. No reinstall is required.
-
-## Screen status
-
-Based on how long ago a screen last checked in — not a live connection, since a screen only ever polls the CMS, it isn't polled by it.
-
-| Status | Last checked in |
-|---|---|
-| Online | Under 2 minutes ago |
-| Slow to respond | 2–15 minutes ago |
-| Offline | Over 15 minutes ago, or never |
-
-To check right now instead of waiting: open the screen's page and click **Probe**, next to its status. It asks the screen to check in immediately and waits up to 40 seconds for it to do so.
-
-## Troubleshooting
-
-**The screen is black. It does not show a code or content.**
-This should not happen. A screen that is deleted, revoked, or disconnected is designed to always show a visible pairing code, specifically so it can be diagnosed from across a room. A fully black screen usually indicates a power or hardware problem, not a pairing problem. Check the power connection first.
-
-**Pairing does not work.**
-Compare the server address shown below the code on the screen with the CMS you are pairing from. If they do not match, the code is valid but cannot be claimed from that CMS.
-
-**How do I check a screen's current status?**
-Long press anywhere on the screen to open the diagnostics overlay. It shows the screen's name, the server it is connected to, the current content version, the amount of cached data, and the most recent error, if any.
+    Device Owner can't be removed with a command. To reuse the device for something else later, factory reset it.
