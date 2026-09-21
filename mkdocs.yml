@@ -12,6 +12,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  logo: images/paskall-wordmark-white.png
+  favicon: images/favicon.png
   language: en
   palette:
     scheme: default
@@ -49,3 +51,6 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra_css:
+  - stylesheets/extra.css
