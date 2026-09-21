@@ -4,6 +4,7 @@ Building a new release of the Android player, uploading it to R2, and rolling it
 
 ## Prerequisites
 
+- **The release signing key.** The build signs with the key in `~/.paskall/keystore.properties` (it names the keystore file, its password and the key alias). Only a computer that has this file can make a build that screens will accept as an update: Android refuses to update an app over one signed with a different key. Without the file the build still succeeds, but signed with a throwaway debug key, and Gradle prints a warning saying so. Never commit the key, and keep a backup of the `~/.paskall` folder somewhere safe. Losing it means reinstalling the app by hand on every screen.
 - The Android SDK's **build-tools**, for `aapt2` — used to read the version straight out of the built APK so it can never disagree with what's uploaded. Not required: pass `--version` explicitly to the publish script instead if you don't have it on your `PATH`.
 - The backend's Python virtualenv, with R2 credentials already in its `.env` — the publish script uploads through the same `app.infra.storage` module the CMS itself uses.
 
@@ -27,7 +28,13 @@ From `player/`:
 ./gradlew clean assembleRelease
 ```
 
-No `-PapiBaseUrl` flag — that override exists only for pointing a local build at `localhost` during emulator testing. Left unset, the build bakes in the real production API URL. The signed APK lands at:
+No `-PapiBaseUrl` flag — that override exists only for pointing a local build at `localhost` during emulator testing. Left unset, the build bakes in the real production API URL. Check the build is signed with the real key before uploading it (the `DN` line must read `CN=Paskall Player, O=Fortu Digital, C=ID`, not `Android Debug`):
+
+```bash
+apksigner verify --print-certs app/build/outputs/apk/release/app-release.apk | grep DN
+```
+
+The signed APK lands at:
 
 ```
 app/build/outputs/apk/release/app-release.apk
@@ -61,7 +68,7 @@ The script reads `versionName` back out of the APK with `aapt2` and refuses to g
 
 ### Try it on one screen first
 
-Open the screen's page in the CMS, **Manage** tab, **Software update**. Pick the version you just uploaded and choose **Update this screen**. That one screen installs it on its next check-in — usually within 30 seconds — and nothing else changes. Once you're happy, roll it out to everyone.
+Open the screen's page in the CMS, **Manage** tab, **Software update**. Pick the version you just uploaded and choose **Update this screen**. That one screen installs it on its next check-in — within a few seconds — and nothing else changes. Once you're happy, roll it out to everyone.
 
 *Only an owner can do this. The pending update clears itself once the screen reports it is running that version, or you can cancel it before then.*
 
@@ -69,7 +76,7 @@ Open the screen's page in the CMS, **Manage** tab, **Software update**. Pick the
 
 Open the CMS as an owner — **Settings → Software updates**. Pick the version and choose **Now** or a future date and time.
 
-Every screen picks this up on its next heartbeat after that moment — usually within 30 seconds — and installs it silently if it's provisioned as Device Owner. A screen that isn't Device Owner can't self-install; see [Remote Device Owner Setup](remote-device-owner-setup.md).
+Every screen is told right away (or on its next check-in, if it can't be reached by push) and installs it silently if it's provisioned as Device Owner. A screen that isn't Device Owner can't self-install; see [Remote Device Owner Setup](remote-device-owner-setup.md).
 
 !!! warning "This one is fleet-wide"
     Scheduling "now" here pushes to every live screen at once. For anything riskier than a small fix, verify on the emulator or on one real screen (the section above) before scheduling it for the fleet.
