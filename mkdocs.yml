@@ -1,0 +1,50 @@
+# Paskall Docs — built and published by .github/workflows/deploy.yml on every push to main.
+# To add a page: put a .md file in docs/ and list it under `nav` below.
+
+site_name: Paskall Docs
+site_description: Guides for running screens on Paskall.
+site_url: https://brebribre.github.io/paskall-docs/
+
+# The pencil on every page opens that page in GitHub's editor — that is how the team edits.
+repo_url: https://github.com/brebribre/paskall-docs
+repo_name: paskall-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+    primary: indigo
+    accent: blue
+  features:
+    - content.action.edit    # the "edit this page" pencil
+    - content.code.copy      # copy button on every command
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Connecting a Screen: connecting-a-screen.md
+  - Remote Device Owner Setup: remote-device-owner-setup.md
+  - Instant Updates: instant-updates.md
+  - Building and Publishing the Player: building-and-publishing-the-player.md
+  - User Access Management: user-access-management.md
+
+markdown_extensions:
+  - admonition            # !!! note / !!! warning boxes
+  - attr_list             # { .md-button } on a link
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
