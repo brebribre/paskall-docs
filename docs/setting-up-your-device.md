@@ -52,11 +52,14 @@ Get the app from the [Player Releases](player-releases.md) page. Open it on the 
 1. On the device, go to Settings → About phone and tap **Build number** 7 times.
 2. Go to Settings → Developer options and turn on **USB debugging**.
 3. Connect the device to your computer with a USB cable and accept the "Allow USB debugging?" prompt on the device.
-4. Run:
+4. On your computer, download the current build and install it over the cable. The first line saves the file as `paskall-player.apk` in the folder you run it from; the second sends that file to the device:
 
     ```bash
-    adb install -r fortu-player.apk
+    curl -L -o paskall-player.apk https://signage-cms-production.up.railway.app/player/download
+    adb install -r paskall-player.apk
     ```
+
+    Already downloaded it from the [Player Releases](player-releases.md) page? Skip the first line and put your file's name in the second.
 
 #### Method B: No cable
 
@@ -85,10 +88,11 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
 2. During setup, skip the Google account step. Skip Wi-Fi too if offered, and add it afterwards from Settings.
 3. Turn on Developer options: Settings → About → tap Build number 7 times.
 4. Turn on USB debugging: Settings → Developer options → USB debugging.
-5. Install the app and make it Device Owner:
+5. On your computer, download the current build, install it over the cable, and make it Device Owner. The first line saves the file as `paskall-player.apk` in the folder you run it from (skip it if you already have the file, and use its name instead):
 
     ```bash
-    adb install -r fortu-player.apk
+    curl -L -o paskall-player.apk https://signage-cms-production.up.railway.app/player/download
+    adb install -r paskall-player.apk
     adb shell dpm set-device-owner \
       com.fortu.player/com.fortu.player.kiosk.DeviceAdminReceiver
     ```
