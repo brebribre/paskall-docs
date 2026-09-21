@@ -30,6 +30,7 @@ theme:
 nav:
   - Home: index.md
   - Connecting a Screen: connecting-a-screen.md
+  - Player Releases: player-releases.md
   - Remote Device Owner Setup: remote-device-owner-setup.md
   - Instant Updates: instant-updates.md
   - Building and Publishing the Player: building-and-publishing-the-player.md

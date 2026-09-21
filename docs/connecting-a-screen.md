@@ -8,13 +8,12 @@ You need two things ready. Do each once.
 
 ### 1. Setting up the device
 
-The screen (an Android TV, stick, or tablet) must have **Paskall Player** installed and be showing a pairing code like this:
+1. **Install Paskall Player** on the screen (an Android TV, stick, or tablet). Download it from the [Player Releases](player-releases.md) page. If the device is brand new, [Installing the player on a new device](#installing-the-player-on-a-new-device) at the bottom of this page walks through it, including how to lock the device down.
+2. **Open the app.** It shows a pairing code like this:
 
 ![The player's pairing screen: a six-letter code on a blue background](images/pairing/player-pairing-code.png)
 
-If your screen already shows a code like this, you're ready. Skip to [Pairing a screen](#pairing-a-screen).
-
-If the screen is new and has nothing installed yet, follow [Installing the player on a new device](#installing-the-player-on-a-new-device) at the bottom of this page first. That takes about 10 minutes and is done once per screen.
+Once your screen shows a code like this, the device is ready.
 
 ### 2. Setting up your account
 
@@ -108,9 +107,7 @@ Google Play Protect blocks apps that don't come from the Play Store. Turn that o
 
 ### Step 2: Install the app
 
-[Download latest APK](https://signage-cms-production.up.railway.app/player/download){ .md-button .md-button--primary }
-
-Always the current build. Open this link on the device's own browser for Method B, or on your computer for Method A. [Looking for an older build?](https://signage-cms-production.up.railway.app/player/versions)
+Get the app from the [Player Releases](player-releases.md) page. Open it on the device's own browser for Method B, or on your computer for Method A.
 
 #### Method A: USB, from a computer
 
@@ -125,7 +122,7 @@ Always the current build. Open this link on the device's own browser for Method 
 
 #### Method B: No cable
 
-1. On the device, open this page in its browser and tap **Download latest APK** above.
+1. On the device, open the [Player Releases](player-releases.md) page in its browser and tap **Download** on the current version.
 2. Open the downloaded file from the notification shade or file manager.
 3. Allow "Install from unknown sources" when asked.
 
