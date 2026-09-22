@@ -74,7 +74,13 @@ Open the screen's page in the CMS, **Manage** tab, **Software update**. Pick the
 
 ### Roll it out to every screen
 
-Open the CMS as an owner — **Settings → Software updates**. Pick the version and choose **Now** or a future date and time.
+From `backend/`, against production (see the deploy notes for `railway ssh`):
+
+```bash
+python -m scripts.rollout_player 1.0.7            # now
+python -m scripts.rollout_player 1.0.7 --at 2026-10-01T09:00:00+07:00
+python -m scripts.rollout_player --list           # what is live, what is queued
+```
 
 Every screen is told right away (or on its next check-in, if it can't be reached by push) and installs it silently if it's provisioned as Device Owner. A screen that isn't Device Owner can't self-install; see [Remote Device Owner Setup](remote-device-owner-setup.md).
 
@@ -82,7 +88,7 @@ Every screen is told right away (or on its next check-in, if it can't be reached
     Scheduling "now" here pushes to every live screen at once. For anything riskier than a small fix, verify on the emulator or on one real screen (the section above) before scheduling it for the fleet.
 
 !!! note "Rolling back"
-    Schedule an older version the same way. The most recently *scheduled* rollout whose time has already passed is always what's live, so an earlier build scheduled for now simply takes back over — there's no separate "undo."
+    Roll out an older version the same way. The most recently *scheduled* rollout whose time has already passed is always what's live, so an earlier build scheduled for now simply takes back over — there's no separate "undo."
 
 ## Quick reference
 
@@ -96,5 +102,5 @@ Every screen is told right away (or on its next check-in, if it can't be reached
 
 # then, in the CMS as owner:
 #   one screen first → its page → Manage → Software update
-#   everyone        → Settings → Software updates → pick the version → Now / schedule
+#   everyone        → python -m scripts.rollout_player <version>   (from backend/)
 ```
