@@ -9,12 +9,12 @@ Download the file on the screen itself (open this page in its browser), or on yo
 </div>
 
 <noscript>
-<p>Your browser has scripts turned off. <a href="https://signage-cms-production.up.railway.app/player/versions">See the list here instead.</a></p>
+<p>Your browser has scripts turned off. <a href="https://api.paskall.co.id/player/versions">See the list here instead.</a></p>
 </noscript>
 
 <script>
 (function () {
-  var API = 'https://signage-cms-production.up.railway.app';
+  var API = 'https://api.paskall.co.id';
   var box = document.getElementById('releases');
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function date(iso) { try { return new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return iso; } }
