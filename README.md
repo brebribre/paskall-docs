@@ -1,6 +1,6 @@
 # Paskall Docs
 
-The guides for running screens on Paskall. Published at **https://brebribre.github.io/paskall-docs/** — it rebuilds itself about a minute after any change here lands on `main`.
+The guides for running screens on Paskall. Published at **https://docs.paskall.co.id/** — it rebuilds itself about a minute after any change here lands on `main`.
 
 ## Editing a page (no tools needed)
 
