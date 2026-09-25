@@ -73,7 +73,10 @@ To check right now, open the screen's page and click **Probe** next to its statu
 This is almost always power or hardware, not pairing. A screen that has been removed or disconnected always shows a code. Check the power connection first.
 
 **The code doesn't work.**
-Long press anywhere on the screen to open its diagnostics view. Compare the server address shown there with the Paskall you are using. If they don't match, the screen was set up for a different server.
+Open the screen's diagnostics view: hold the top-left corner of the screen for about a second, or tap that corner five times quickly. Compare the server address shown there with the Paskall you are using. If they don't match, the screen was set up for a different server.
 
 **How do I see what a screen is doing?**
-Long press anywhere on the screen. The diagnostics view shows its name, the server it talks to, the content version, cached data, and the most recent error if there is one.
+Hold the top-left corner of the screen for about a second, or tap that corner five times quickly. The five taps also work with a mouse over remote desktop, where holding often doesn't. The diagnostics view shows its name, the server it talks to, the content version, cached data, and the most recent error if there is one.
+
+**How do I get out of the player to reach Android?**
+Open the diagnostics view as above and choose **Leave player**. If the screen has an **App lock PIN** (the screen's page, under **Settings**), enter it on the number keypad that appears and choose **Leave**. The screen then shows the Android home screen. The lock comes back as soon as the player is opened again. The keypad works with a mouse over remote desktop too. The PIN is digits only.

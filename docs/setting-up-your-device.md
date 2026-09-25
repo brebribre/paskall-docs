@@ -101,7 +101,7 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
 
 6. Open the app. It locks itself to the foreground, disables the lock screen and keeps the screen on. Nothing else to configure.
 7. Connect the screen with the code it shows. See [Connecting a Screen](connecting-a-screen.md).
-8. Check it worked: long press the screen to open diagnostics and confirm it says `device owner (full kiosk)`. In Paskall, the screen's page shows **Setup: Managed** once it has checked in. If it says **Basic**, repeat step 5.
+8. Check it worked: hold the top-left corner of the screen for about a second (or tap it five times quickly) to open diagnostics, and confirm it says `device owner (full kiosk)`. In Paskall, the screen's page shows **Setup: Managed** once it has checked in. If it says **Basic**, repeat step 5.
 9. Reboot once. The device comes back to the Android home screen; open Paskall Player from there and confirm it resumes.
 
 !!! note

@@ -92,7 +92,7 @@ A reboot works just as well, if that's easier.
 
 ## Step 6: Verify
 
-Long press anywhere on the screen to open the diagnostics overlay. Confirm it reads `device owner (full kiosk)`, not `not owner (screen pinning only)`.
+Hold the top-left corner of the screen for about a second, or tap that corner five times quickly, to open the diagnostics overlay. Confirm it reads `device owner (full kiosk)`, not `not owner (screen pinning only)`.
 
 !!! note
     From here on, silent self-updates and automatic recovery after a power loss both work the same as a device provisioned via factory reset + USB. Device Owner status cannot be removed with an adb command — to reuse this device for something else later, factory reset it.
