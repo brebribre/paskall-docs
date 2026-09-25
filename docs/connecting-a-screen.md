@@ -29,7 +29,12 @@ Connecting a screen takes about a minute: the screen shows a code, you type that
 
 ![Waiting for the screen to connect](images/pairing/04-connecting.png)
 
-**Step 5.** Once the screen has connected, Paskall asks how it is mounted. Pick the option where the top of the picture would be at the top of the panel, then click **Done**. You can change this later on the screen's page.
+**Step 5.** Once the screen has connected, Paskall needs to know how it is mounted.
+
+- **If the screen could tell by itself,** Paskall shows what it found and already uses it. Click **Done**, or **Change** if it's wrong. A screen can tell when it has a motion sensor, like a tablet, or when its Android is already set to a rotation. This needs Paskall Player 1.4.1 or newer.
+- **Otherwise,** Paskall asks. Pick the option where the top of the picture would be at the top of the panel, then click **Done**. A TV box can't tell: the TV looks the same to it whether it hangs straight or sideways.
+
+You can change it any time on the screen's page.
 
 ![The screen is connected; four buttons ask which way the panel is mounted](images/pairing/05-connected-orientation.png)
 
@@ -44,7 +49,7 @@ That's it. To make it play something, put a playlist on it from **Campaigns**. T
 
 ## Orientation
 
-Orientation is chosen when the screen connects, and can be changed any time on the screen's page under **Settings**. It is the rotation in degrees, clockwise from the panel's own landscape:
+Orientation is set when the screen connects, by the screen itself when it can tell, otherwise by you. It can be changed any time on the screen's page under **Settings**. It is the rotation in degrees, clockwise from the panel's own landscape:
 
 | Option | Meaning |
 |---|---|

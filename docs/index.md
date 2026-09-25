@@ -6,6 +6,7 @@ Everything for running screens on Paskall: connecting new hardware, and what cha
 |---|---|
 | [Setting Up Your Device](setting-up-your-device.md) | Getting a player onto the screen: the web player for smart TVs, or the Android app, with optional lock-down. |
 | [Connecting a Screen](connecting-a-screen.md) | Pairing a screen step by step, with pictures. |
+| [Uploading Media](uploading-media.md) | Which picture and video formats you can upload, and what Paskall does to each file so every screen can show it. |
 | [Player Releases](player-releases.md) | Every version of Paskall Player, with a download button for each. |
 | [Remote Device Owner Setup](remote-device-owner-setup.md) | Granting Device Owner status to a screen that's already running, over Wi-Fi, with no USB cable and no factory reset. |
 | [Instant Updates](instant-updates.md) | Why your screens find out about changes in moments instead of waiting up to 30 seconds, and what to expect while it rolls out. |
