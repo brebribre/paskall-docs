@@ -33,12 +33,8 @@ nav:
   - Home: index.md
   - Setting Up Your Device: setting-up-your-device.md
   - Connecting a Screen: connecting-a-screen.md
-  - Uploading Media: uploading-media.md
   - Player Releases: player-releases.md
   - Remote Device Owner Setup: remote-device-owner-setup.md
-  - Instant Updates: instant-updates.md
-  - Building and Publishing the Player: building-and-publishing-the-player.md
-  - User Access Management: user-access-management.md
 
 markdown_extensions:
   - admonition            # !!! note / !!! warning boxes
