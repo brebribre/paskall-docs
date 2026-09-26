@@ -1,6 +1,6 @@
 # Device Owner over Wi-Fi
 
-Turn on Device Owner for a screen that already runs Marien Player, without a cable or a reset. New device? Use [Lock it down](setting-up-your-device.md#lock-it-down-recommended) instead.
+Turn on Device Owner for a screen that already runs Marien Player, without a cable or a reset.
 
 1. Install adb on your computer: `brew install --cask android-platform-tools`
 2. Connect to the device (same Wi-Fi):

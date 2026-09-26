@@ -30,20 +30,4 @@ Pick a player. Both end on a pairing code; then [connect the screen](connecting-
       ```
 3. Open **Marien Player**. It shows a pairing code.
 
-### Lock it down (recommended)
-
-Device Owner mode stops anyone leaving the app, and enables silent updates and switching the screen off on a schedule.
-
-1. Factory reset the device. During setup, **don't sign in to any account**.
-2. Turn on **Developer options** (tap **Build number** 7 times) and **USB debugging**.
-3. From a computer:
-    ```bash
-    curl -L -o marien-player.apk https://api.marien.co.id/player/download
-    adb install -r marien-player.apk
-    adb shell dpm set-device-owner \
-      com.fortu.player/com.fortu.player.kiosk.DeviceAdminReceiver
-    ```
-    Expect `Success: Device owner set`. An error about accounts means one was added: reset and start again.
-4. Open the app and [connect the screen](connecting-a-screen.md). Its page in Marien CMS shows **Setup: Managed**.
-
-Already running without Device Owner? See [Device Owner over Wi-Fi](remote-device-owner-setup.md).
+To stop anyone leaving the app, see [Device Owner over Wi-Fi](remote-device-owner-setup.md).
