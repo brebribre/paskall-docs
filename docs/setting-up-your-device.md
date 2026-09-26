@@ -15,7 +15,7 @@ Whichever you choose, the device ends up showing a pairing code. Then continue w
 
 1. On the TV or device, open the browser and go to:
 
-    **https://player.paskall.co.id**
+    **https://player.marien.co.id**
 
 2. A pairing code appears. Connect the screen from Marien with that code. See [Connecting a Screen](connecting-a-screen.md).
 3. Press **OK** on the remote once. That hides the browser bar; the player stays full screen after that, including through its own updates.
@@ -55,7 +55,7 @@ Get the app from the [Player Releases](player-releases.md) page. Open it on the 
 4. On your computer, download the current build and install it over the cable. The first line saves the file as `marien-player.apk` in the folder you run it from; the second sends that file to the device:
 
     ```bash
-    curl -L -o marien-player.apk https://api.paskall.co.id/player/download
+    curl -L -o marien-player.apk https://api.marien.co.id/player/download
     adb install -r marien-player.apk
     ```
 
@@ -91,7 +91,7 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
 5. On your computer, download the current build, install it over the cable, and make it Device Owner. The first line saves the file as `marien-player.apk` in the folder you run it from (skip it if you already have the file, and use its name instead):
 
     ```bash
-    curl -L -o marien-player.apk https://api.paskall.co.id/player/download
+    curl -L -o marien-player.apk https://api.marien.co.id/player/download
     adb install -r marien-player.apk
     adb shell dpm set-device-owner \
       com.fortu.player/com.fortu.player.kiosk.DeviceAdminReceiver

@@ -1,6 +1,6 @@
 # Marien Docs
 
-The guides for running screens on Marien. Published at **https://docs.paskall.co.id/** — it rebuilds itself about a minute after any change here lands on `main`.
+The guides for running screens on Marien. Published at **https://docs.marien.co.id/** — it rebuilds itself about a minute after any change here lands on `main`.
 
 ## Editing a page (no tools needed)
 
