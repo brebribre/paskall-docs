@@ -1,8 +1,6 @@
 # Player Releases
 
-Every version of **Marien Player** ever published, newest first. The one marked **current** is what every screen is being given right now.
-
-Download the file on the screen itself (open this page in its browser), or on your computer and copy it over. Then follow [Connecting a Screen](connecting-a-screen.md).
+Every Marien Player version, newest first. **Current** is what screens are given now. Install it as in [Set Up Your Device](setting-up-your-device.md#android-player).
 
 <div id="releases" markdown>
 <p><em>Loading the list…</em></p>

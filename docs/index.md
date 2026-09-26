@@ -1,15 +1,12 @@
-# Guides
+# Marien Docs
 
-Everything for running screens on Marien: connecting new hardware, and what changes as the product does.
+Get a screen playing in three steps.
 
-| Guide | What it covers |
-|---|---|
-| [Setting Up Your Device](setting-up-your-device.md) | Getting a player onto the screen: the web player for smart TVs, or the Android app, with optional lock-down. |
-| [Connecting a Screen](connecting-a-screen.md) | Pairing a screen step by step, with pictures. |
-| [Player Releases](player-releases.md) | Every version of Marien Player, with a download button for each. |
-| [Remote Device Owner Setup](remote-device-owner-setup.md) | Granting Device Owner status to a screen that's already running, over Wi-Fi, with no USB cable and no factory reset. |
+1. [Set up your device](setting-up-your-device.md): put Marien Player on the screen.
+2. [Connect the screen](connecting-a-screen.md): type its code into Marien CMS.
+3. In Marien CMS, put a playlist on it from **Campaigns**.
+
+Also: [Player releases](player-releases.md) · [Device Owner over Wi-Fi](remote-device-owner-setup.md)
 
 !!! tip "Spotted a mistake?"
-    Click the pencil at the top of any page. It opens that page in GitHub's editor — change the text, press **Commit changes**, and the site updates itself about a minute later.
-
-*For the team. Share freely with anyone who manages screens.*
+    Click the pencil at the top of the page, edit, and press **Commit changes**. The site updates in about a minute.

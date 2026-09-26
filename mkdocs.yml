@@ -31,10 +31,10 @@ theme:
 
 nav:
   - Home: index.md
-  - Setting Up Your Device: setting-up-your-device.md
-  - Connecting a Screen: connecting-a-screen.md
+  - Set Up Your Device: setting-up-your-device.md
+  - Connect a Screen: connecting-a-screen.md
   - Player Releases: player-releases.md
-  - Remote Device Owner Setup: remote-device-owner-setup.md
+  - Device Owner over Wi-Fi: remote-device-owner-setup.md
 
 markdown_extensions:
   - admonition            # !!! note / !!! warning boxes
