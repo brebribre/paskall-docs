@@ -1,6 +1,6 @@
 # Player Releases
 
-Every version of **Paskall Player** ever published, newest first. The one marked **current** is what every screen is being given right now.
+Every version of **Marien Player** ever published, newest first. The one marked **current** is what every screen is being given right now.
 
 Download the file on the screen itself (open this page in its browser), or on your computer and copy it over. Then follow [Connecting a Screen](connecting-a-screen.md).
 

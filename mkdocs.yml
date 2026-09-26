@@ -1,8 +1,8 @@
-# Paskall Docs — built and published by .github/workflows/deploy.yml on every push to main.
+# Marien Docs — built and published by .github/workflows/deploy.yml on every push to main.
 # To add a page: put a .md file in docs/ and list it under `nav` below.
 
-site_name: Paskall Docs
-site_description: Guides for running screens on Paskall.
+site_name: Marien Docs
+site_description: Guides for running screens on Marien.
 site_url: https://docs.paskall.co.id/
 
 # The pencil on every page opens that page in GitHub's editor — that is how the team edits.
@@ -12,13 +12,13 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: images/paskall-wordmark-white.png
+  logo: images/marien-wordmark-white.png
   favicon: images/favicon.png
   language: en
   palette:
     scheme: default
-    primary: indigo
-    accent: blue
+    primary: custom       # the Marien blues, set in stylesheets/extra.css
+    accent: custom
   features:
     - content.action.edit    # the "edit this page" pencil
     - content.code.copy      # copy button on every command

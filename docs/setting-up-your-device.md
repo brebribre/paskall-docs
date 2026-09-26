@@ -17,7 +17,7 @@ Whichever you choose, the device ends up showing a pairing code. Then continue w
 
     **https://player.paskall.co.id**
 
-2. A pairing code appears. Connect the screen from Paskall with that code. See [Connecting a Screen](connecting-a-screen.md).
+2. A pairing code appears. Connect the screen from Marien with that code. See [Connecting a Screen](connecting-a-screen.md).
 3. Press **OK** on the remote once. That hides the browser bar; the player stays full screen after that, including through its own updates.
 4. Make it stay there: set that address as the browser's home page, turn on the browser's kiosk or full-screen mode if it has one, and turn off the TV's own screensaver or eco sleep.
 
@@ -52,11 +52,11 @@ Get the app from the [Player Releases](player-releases.md) page. Open it on the 
 1. On the device, go to Settings → About phone and tap **Build number** 7 times.
 2. Go to Settings → Developer options and turn on **USB debugging**.
 3. Connect the device to your computer with a USB cable and accept the "Allow USB debugging?" prompt on the device.
-4. On your computer, download the current build and install it over the cable. The first line saves the file as `paskall-player.apk` in the folder you run it from; the second sends that file to the device:
+4. On your computer, download the current build and install it over the cable. The first line saves the file as `marien-player.apk` in the folder you run it from; the second sends that file to the device:
 
     ```bash
-    curl -L -o paskall-player.apk https://api.paskall.co.id/player/download
-    adb install -r paskall-player.apk
+    curl -L -o marien-player.apk https://api.paskall.co.id/player/download
+    adb install -r marien-player.apk
     ```
 
     Already downloaded it from the [Player Releases](player-releases.md) page? Skip the first line and put your file's name in the second.
@@ -88,11 +88,11 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
 2. During setup, skip the Google account step. Skip Wi-Fi too if offered, and add it afterwards from Settings.
 3. Turn on Developer options: Settings → About → tap Build number 7 times.
 4. Turn on USB debugging: Settings → Developer options → USB debugging.
-5. On your computer, download the current build, install it over the cable, and make it Device Owner. The first line saves the file as `paskall-player.apk` in the folder you run it from (skip it if you already have the file, and use its name instead):
+5. On your computer, download the current build, install it over the cable, and make it Device Owner. The first line saves the file as `marien-player.apk` in the folder you run it from (skip it if you already have the file, and use its name instead):
 
     ```bash
-    curl -L -o paskall-player.apk https://api.paskall.co.id/player/download
-    adb install -r paskall-player.apk
+    curl -L -o marien-player.apk https://api.paskall.co.id/player/download
+    adb install -r marien-player.apk
     adb shell dpm set-device-owner \
       com.fortu.player/com.fortu.player.kiosk.DeviceAdminReceiver
     ```
@@ -101,8 +101,8 @@ A plain install keeps the screen awake and hides the system bars, but the Home b
 
 6. Open the app. It locks itself to the foreground, disables the lock screen and keeps the screen on. Nothing else to configure.
 7. Connect the screen with the code it shows. See [Connecting a Screen](connecting-a-screen.md).
-8. Check it worked: hold the top-left corner of the screen for about a second (or tap it five times quickly) to open diagnostics, and confirm it says `device owner (full kiosk)`. In Paskall, the screen's page shows **Setup: Managed** once it has checked in. If it says **Basic**, repeat step 5.
-9. Reboot once. The device comes back to the Android home screen; open Paskall Player from there and confirm it resumes.
+8. Check it worked: hold the top-left corner of the screen for about a second (or tap it five times quickly) to open diagnostics, and confirm it says `device owner (full kiosk)`. In Marien, the screen's page shows **Setup: Managed** once it has checked in. If it says **Basic**, repeat step 5.
+9. Reboot once. The device comes back to the Android home screen; open Marien Player from there and confirm it resumes.
 
 !!! note
     Device Owner can't be removed with a command. To reuse the device for something else later, factory reset it.

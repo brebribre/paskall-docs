@@ -1,6 +1,6 @@
 # Connecting a Screen
 
-Connecting a screen takes about a minute: the screen shows a code, you type that code into Paskall, and the screen starts playing. This page walks through it with pictures.
+Connecting a screen takes about a minute: the screen shows a code, you type that code into Marien, and the screen starts playing. This page walks through it with pictures.
 
 ## Before you start
 
@@ -10,7 +10,7 @@ Connecting a screen takes about a minute: the screen shows a code, you type that
 
 ## Pairing a screen
 
-**Step 1.** Open Paskall and go to **Screens** in the left menu. Click **Connect a screen**.
+**Step 1.** Open Marien and go to **Screens** in the left menu. Click **Connect a screen**.
 
 ![The Screens page with the Connect a screen button at the top right](images/pairing/01-screens-page.png)
 
@@ -25,14 +25,14 @@ Connecting a screen takes about a minute: the screen shows a code, you type that
 !!! tip
     The code never contains the letters O, I or L, or the digits 0 and 1, so there is nothing to mix up. Codes stop working after 15 minutes; if yours has expired, the screen shows a new one by itself.
 
-**Step 4.** Click **Connect**. Paskall waits for the screen to answer. This usually takes a few seconds.
+**Step 4.** Click **Connect**. Marien waits for the screen to answer. This usually takes a few seconds.
 
 ![Waiting for the screen to connect](images/pairing/04-connecting.png)
 
-**Step 5.** Once the screen has connected, Paskall needs to know how it is mounted.
+**Step 5.** Once the screen has connected, Marien needs to know how it is mounted.
 
-- **If the screen could tell by itself,** Paskall shows what it found and already uses it. Click **Done**, or **Change** if it's wrong. A screen can tell when it has a motion sensor, like a tablet, or when its Android is already set to a rotation. This needs Paskall Player 1.4.1 or newer.
-- **Otherwise,** Paskall asks. Pick the option where the top of the picture would be at the top of the panel, then click **Done**. A TV box can't tell: the TV looks the same to it whether it hangs straight or sideways.
+- **If the screen could tell by itself,** Marien shows what it found and already uses it. Click **Done**, or **Change** if it's wrong. A screen can tell when it has a motion sensor, like a tablet, or when its Android is already set to a rotation. This needs Marien Player 1.4.1 or newer.
+- **Otherwise,** Marien asks. Pick the option where the top of the picture would be at the top of the panel, then click **Done**. A TV box can't tell: the TV looks the same to it whether it hangs straight or sideways.
 
 You can change it any time on the screen's page.
 
@@ -40,11 +40,11 @@ You can change it any time on the screen's page.
 
 **Step 6.** You land on the screen's own page. The screen itself now shows a "waiting for content" card with its name.
 
-![The new screen's page in Paskall](images/pairing/06-screen-page.png)
+![The new screen's page in Marien](images/pairing/06-screen-page.png)
 
 That's it. To make it play something, put a playlist on it from **Campaigns**. The screen starts playing within a few seconds.
 
-!!! note "If a screen is removed from Paskall"
+!!! note "If a screen is removed from Marien"
     It notices by itself and shows a new pairing code. Nothing needs doing on the hardware. Just connect it again with the new code.
 
 ## Orientation
@@ -62,7 +62,7 @@ The two portrait options matter: a tall screen stood on the other side needs the
 
 ## Screen status
 
-Paskall shows whether a screen is reachable from how long ago it last checked in.
+Marien shows whether a screen is reachable from how long ago it last checked in.
 
 | Status | Last checked in |
 |---|---|
@@ -78,7 +78,7 @@ To check right now, open the screen's page and click **Probe** next to its statu
 This is almost always power or hardware, not pairing. A screen that has been removed or disconnected always shows a code. Check the power connection first.
 
 **The code doesn't work.**
-Open the screen's diagnostics view: hold the top-left corner of the screen for about a second, or tap that corner five times quickly. Compare the server address shown there with the Paskall you are using. If they don't match, the screen was set up for a different server.
+Open the screen's diagnostics view: hold the top-left corner of the screen for about a second, or tap that corner five times quickly. Compare the server address shown there with the Marien you are using. If they don't match, the screen was set up for a different server.
 
 **How do I see what a screen is doing?**
 Hold the top-left corner of the screen for about a second, or tap that corner five times quickly. The five taps also work with a mouse over remote desktop, where holding often doesn't. The diagnostics view shows its name, the server it talks to, the content version, cached data, and the most recent error if there is one.
